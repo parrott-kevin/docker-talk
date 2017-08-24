@@ -1,0 +1,19 @@
+{
+  "name": "docker-talk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:parrott-kevin/docker-talk.git",
+  "author": "Kevin Parrott <parrott.kevin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

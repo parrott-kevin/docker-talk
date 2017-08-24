@@ -1,0 +1,29 @@
+version: '3'
+services:
+  ubuntu:
+    build: ./ubuntu
+    image: local/ubuntu
+  server:
+    build: ./server
+    depends_on:
+      - ubuntu
+    command: bash -c 'yarn install && yarn start'
+    ports:
+      - '9000:9000'
+    volumes:
+      - './server:/www/'
+      - '/www/node_modules'
+  client:
+    build: ./client
+    depends_on:
+      - ubuntu
+      - server
+    environment:
+      - NODE_ENV=$NODE_ENV
+      - HOST=$HOST
+    command: bash -c 'yarn install && yarn dev'
+    ports:
+      - '8000:8000'
+    volumes:
+      - './client:/www/'
+      - '/www/node_modules'

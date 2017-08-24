@@ -1,0 +1,13 @@
+{
+  "name": "docker-talk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:parrott-kevin/docker-talk.git",
+  "author": "Kevin Parrott <parrott.kevin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4"
+  },
+  "devDependencies": {}
+}

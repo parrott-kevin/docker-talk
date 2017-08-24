@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: bash -c 'npm install && npm start'
+    ports:
+      - '9000:9000'
+    volumes:
+      - '.:/www/'
+      - '/www/node_modules'
