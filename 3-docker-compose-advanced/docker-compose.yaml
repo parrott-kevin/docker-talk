@@ -1,12 +1,22 @@
 version: '3'
 services:
   ubuntu:
-    build: ./ubuntu
+    build: ./docker/ubuntu
     image: local/ubuntu
+  nodejs-deps:
+    build: ./docker/nodejs-deps
+    image: local/nodejs-deps
+    depends_on:
+      - ubuntu
+  nodejs:
+    build: ./docker/nodejs
+    image: local/nodejs
+    depends_on:
+      - nodejs-deps
   server:
     build: ./server
     depends_on:
-      - ubuntu
+      - nodejs
     command: bash -c 'yarn install && yarn start'
     ports:
       - '9000:9000'
@@ -16,7 +26,6 @@ services:
   client:
     build: ./client
     depends_on:
-      - ubuntu
       - server
     environment:
       - NODE_ENV=$NODE_ENV

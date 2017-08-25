@@ -1,7 +1,7 @@
 # Dockerfile
 
 # using lts/boron
-FROM local/ubuntu
+FROM local/nodejs
 
 RUN mkdir -p /www
 WORKDIR /www

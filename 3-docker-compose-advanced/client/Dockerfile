@@ -1,7 +1,7 @@
 # Dockerfile
 
 # using ubuntu:latest
-FROM local/ubuntu
+FROM local/nodejs
 
 # Set the work directory
 RUN mkdir -p /www

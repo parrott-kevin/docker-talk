@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
 
 app.get('/api/status', (req, res) => {
-  res.status(200).json({ message: 'hello world' })
+  res.status(200).json({ message: 'hello detroit labs' })
 })
 
 app.set('PORT', 9000)

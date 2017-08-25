@@ -8,7 +8,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/api/status', (req, res) => {
-  res.status(200).send('hello detroit labs')
+  res.status(200).send('hello world')
 })
 
 app.set('PORT', 9000)
