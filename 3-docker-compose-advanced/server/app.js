@@ -10,10 +10,10 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
 
 app.get('/api/status', (req, res) => {
-  res.status(200).json({ message: 'hello detroit labs' })
+  res.status(200).json({ message: 'Hello Detroit Software Guild' })
 })
 
 app.set('PORT', 9000)
-const server = app.listen(app.get('PORT'), () => {
-  console.log('Server started on http://localhost:' + server.address().port)
+app.listen(app.get('PORT'), () => {
+  console.log('Server started on http://localhost:' + app.get('PORT'))
 })

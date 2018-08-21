@@ -1,6 +1,4 @@
 # Dockerfile
-
-# using ubuntu:latest
 FROM local/nodejs
 
 # Set the work directory

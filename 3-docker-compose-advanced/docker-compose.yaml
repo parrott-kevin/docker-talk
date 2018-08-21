@@ -1,18 +1,8 @@
 version: '3'
 services:
-  ubuntu:
-    build: ./docker/ubuntu
-    image: local/ubuntu
-  nodejs-deps:
-    build: ./docker/nodejs-deps
-    image: local/nodejs-deps
-    depends_on:
-      - ubuntu
   nodejs:
     build: ./docker/nodejs
     image: local/nodejs
-    depends_on:
-      - nodejs-deps
   server:
     build: ./server
     depends_on:
@@ -23,16 +13,16 @@ services:
     volumes:
       - './server:/www/'
       - '/www/node_modules'
-  client:
-    build: ./client
+  web:
+    build: ./web
     depends_on:
       - server
     environment:
-      - NODE_ENV=$NODE_ENV
-      - HOST=$HOST
+      - NODE_ENV=development
+      - API_HOST=http://localhost:9000
     command: bash -c 'yarn install && yarn dev'
     ports:
       - '8000:8000'
     volumes:
-      - './client:/www/'
+      - './web:/www/'
       - '/www/node_modules'

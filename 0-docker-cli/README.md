@@ -11,4 +11,5 @@ $ docker run ubuntu:latest
 Enter ubuntu and explore the file system
 ```
 $ docker run -it ubuntu:latest /bin/bash
+$ cat /etc/*-release
 ```

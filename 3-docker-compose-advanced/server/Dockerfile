@@ -1,6 +1,4 @@
 # Dockerfile
-
-# using lts/boron
 FROM local/nodejs
 
 RUN mkdir -p /www

@@ -14,14 +14,20 @@
     "jest": true
   },
   "plugins": [
-    "react"
+    "react",
+    "prettier"
   ],
-  "extends": ["standard", "standard-react"],
+  "extends": [
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react"
+  ],
   "rules": {
-    "react/no-multi-comp": ["error", { "ignoreStateless": true }]
+    "prettier/prettier": "error",
+    "no-unused-vars": "error"
   },
   "globals": {
-    "DP_API_HOST": true,
-    "DP_NODE_ENV": true
+    "API_HOST": true,
+    "NODE_ENV": true
   }
 }

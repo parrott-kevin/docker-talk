@@ -1,7 +1,7 @@
 {
   "name": "docker-talk",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "repository": "git@github.com:parrott-kevin/docker-talk.git",
   "author": "Kevin Parrott <parrott.kevin@gmail.com>",
   "license": "MIT",
