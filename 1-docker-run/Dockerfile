@@ -1,6 +1,6 @@
 # Dockerfile
 
-# using lts/boron
+# using lts/carbon
 FROM node:carbon-alpine
 
 RUN mkdir -p /www

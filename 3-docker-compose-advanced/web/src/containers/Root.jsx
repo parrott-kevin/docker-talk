@@ -29,7 +29,7 @@ export default class Root extends Component {
         <div className="row">
           <div className="col">
             <div className="jumbotron">
-              <h1 className="display-4">Docker Example</h1>
+              <h1 className="display-4">Docker Example for Everyone</h1>
             </div>
           </div>
         </div>
